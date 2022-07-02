@@ -1,0 +1,25 @@
+:where(#app, main) {
+	background: transparent;
+	height: 100%;
+}
+
+:where(.mx-auto) {
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.flex {
+	display: flex;
+}
+
+.flex-col {
+	flex-direction: column;
+}
+
+.w-full {
+	width: 100%;
+}
+
+.min-h-screen {
+	min-height: 100vh;
+}

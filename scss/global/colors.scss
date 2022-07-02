@@ -1,0 +1,40 @@
+:root {  
+  --color-brand: hsl(23, 67%, 54%); // #D8773C
+  --color-white: hsl(10, 12%, 94%); // #FBF8EF
+  --color-black: hsl(240, 6%, 13%); // #202024
+  --color-dark: hsl(240, 6%, 10%);  // #18181b
+  --color-link: #0000;
+  --color-hover:#0000;
+  --gradient: hsl(240, 2%, 25%);    // #3e3e41
+  --gradient-2: hsl(19, 93%, 59%);
+}
+
+// * Define dark and light palettes */
+
+/* Light Mode */
+:root[color-mode="light"] {
+  --surface1: #e6e6e6;
+  --surface2: #f2f2f2;
+  --surface3: #ffffff;
+  --element1: #111111;
+  --element2: #222222;
+  --element3: #333333;
+  --elementInverse: #eee;
+  --primary: #01408e;
+  --secondary: #3c5d5c;
+  --tertiary: #fff7d6;
+}
+
+/* Dark Mode */
+:root[color-mode="dark"] {
+  --surface1: #262626;
+  --surface2: #333333;
+  --surface3: #404040;
+  --element1: #eeeeee;
+  --element2: #dddddd;
+  --element3: #cccccc;
+  --elementInverse: #111;
+  --primary: #8fceff;
+  --secondary: #72faca;
+  --tertiary: #eee8a9;
+}
