@@ -1,14 +1,61 @@
-html {
+/*-----Universal Styles-----*/
+*, 
+*::before, 
+*::after {
+  box-sizing: border-box;  
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/*-----Browser Inconsistancy Fixes-----*/
+button,
+input,
+[type='button'],
+[type='reset'],
+[type='submit'] {
+  -webkit-appearance: button;
+}
+
+[type='search'] {
+  -webkit-appearance: textfield; /* 1 */
+  outline-offset: -2px; /* 2 */
+}
+
+::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+::-webkit-inner-spin-button,
+::-webkit-outer-spin-button {
+  height: auto;
+}
+
+::-webkit-file-upload-button {
+  -webkit-appearance: button; /* 1 */
+  font: inherit; /* 2 */
+}
+
+::-moz-focus-inner {
+  border-style: none;
+  padding: 0;
+}
+
+:-moz-focusring {
+  outline: 1px dotted ButtonText;
+}
+
+
+/*-----Core Styles-----*/
+:where(html) {
   font-size: 100%;
   box-sizing: border-box;
 }
 
-*, 
-*::before, 
-*::after {
-  border: 0;
-  outline: none;
-  box-sizing: inherit;  
+:where(html:focus-within) {
+  scroll-behavior: smooth;
 }
 
 :where(blockquote, body, dd, dl, figure, h1, h2, h3, h4, p) {
@@ -21,17 +68,13 @@ html {
   padding: 0;
 }
 
-:where(html:focus-within) {
-  scroll-behavior: smooth;
-}
-
 :where(img, picture, svg) {
   display: block;
   max-width: 100%;
 }
 
 :where(img[width]) {
-  height: auto;
+  height: auto !important;
 }
 
 :where(svg) {
@@ -39,26 +82,41 @@ html {
   pointer-events: none;
 }
 
+:where(button) {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
 @media (prefers-reduced-motion: reduce) {
   html:focus-within {
     scroll-behavior: auto;
   }
+  
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
 }
 
-body {
-  margin: 0;
-  padding: 0;
+body, 
+html {
+  height: 100%;
   overflow-x: hidden;
-  min-height: 100vh;
 }
 
 body {
   font: {
 		size: 1.12rem;
 		family: var(--fontstack);
+    weight: 300;
 	}
   line-height: 1.6;
   text-rendering: optimizeSpeed;
-  //color: var(--color-white);
-  //background: linear-gradient(to bottom, var(--gradient), var(--color-dark));
+  color: var(--color-white);
+  background: var(--background-dark);
 }

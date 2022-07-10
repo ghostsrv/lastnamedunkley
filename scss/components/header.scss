@@ -1,0 +1,9 @@
+
+header {
+  background: var(--background-dark);
+  color: #fff;
+  position: relative;
+  z-index: 1;
+  min-height: 80vh;
+  transition: height 500ms, background 500ms;
+} 

@@ -1,25 +1,30 @@
-:where(#app, main) {
-	background: transparent;
-	height: 100%;
+@use '../utils' as *;
+
+:root {
+  --viewport-height: 100vh;
+  --viewport-weight: 100%;
+  
+  --background-height: 100vh;
+  --alignment: center;
+  --flex-alignment: center;
+
+  --container-mx-wight: 65rem;
+  --container-mw: 100.0rem;
+  --container-pd: 0 2.0rem;
 }
 
-:where(.mx-auto) {
-	margin-left: auto;
-	margin-right: auto;
+// .container is main centered wrapper with a max width of 100.0rem (1120px)
+
+.container {
+  margin: 0 auto;
+  max-width: var(--container-mx-wight);
+  padding: var(--container-pd) ;
+  position: relative;
+  width: 100%;
+
+  /*@include respond-to('small') {
+    padding: 0 5rem !important;
+  }*/
 }
 
-.flex {
-	display: flex;
-}
 
-.flex-col {
-	flex-direction: column;
-}
-
-.w-full {
-	width: 100%;
-}
-
-.min-h-screen {
-	min-height: 100vh;
-}

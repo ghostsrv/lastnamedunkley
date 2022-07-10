@@ -1,0 +1,36 @@
+
+@use "sass:math";
+
+// rem fallback - credits: http://zerosixthree.se/
+
+@function calculateRem($size) {
+  $remSize: $size / 16px;
+  @return $remSize * 1rem;
+}
+
+@mixin font-size($size) {
+  font-size: $size;
+  font-size: calculateRem($size);
+}
+
+
+
+
+
+
+@mixin mx-auto {
+  :where(.mx-auto) {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+@mixin flex-center { display: flex; justify-content: center; align-items: center; }
+
+.flexcenter {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+  align-items: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
