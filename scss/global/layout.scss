@@ -1,24 +1,9 @@
 @use '../utils' as *;
 
-:root {
-  --viewport-height: 100vh;
-  --viewport-weight: 100%;
-  
-  --background-height: 100vh;
-  --alignment: center;
-  --flex-alignment: center;
-
-  --container-mx-wight: 65rem;
-  --container-mw: 100.0rem;
-  --container-pd: 0 2.0rem;
-}
-
-// .container is main centered wrapper with a max width of 100.0rem (1120px)
-
 .container {
   margin: 0 auto;
-  max-width: var(--container-mx-wight);
-  padding: var(--container-pd) ;
+  max-width: var(--container-weight);
+  padding: 0 2.0rem;
   position: relative;
   width: 100%;
 

@@ -1,15 +1,12 @@
 @use '../utils' as *;
 
 .nav {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  max-width: var(--viewport-weight);
-  bottom: auto;
-  z-index: 100;
-  background: none;
+  position: relative;
+  width: 100%;
+  z-index: 10;
   color: white;
+  padding: 1rem 1rem;
+  background-color: red;
   transition: 0.35s all ease;
 
   .block--menu {
@@ -17,6 +14,7 @@
     height: 3.5rem;
     justify-content: space-between;
     align-items: center;
+    color: black;
 
     @include respond-to('medium') {
     height: 5.5rem;
@@ -55,6 +53,8 @@
 }
 
 .shrink {
-  height:40px;
+  position: sticky;
+  top: 0;
+  height:20px;
   background: #aaa;
 }
