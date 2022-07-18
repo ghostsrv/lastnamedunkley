@@ -3,13 +3,20 @@
 .container {
   margin: 0 auto;
   max-width: var(--container-weight);
-  padding: 0 2.0rem;
+  padding: 0 1rem;
   position: relative;
   width: 100%;
-
-  /*@include respond-to('small') {
-    padding: 0 5rem !important;
-  }*/
 }
 
 
+@include respond-to("medium") {
+  .container {
+    padding: 0 1.5rem;
+  }
+}
+
+@include respond-to("large") {
+  .container {
+    padding: 0 2rem;
+  }
+}
